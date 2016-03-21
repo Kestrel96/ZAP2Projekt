@@ -12,7 +12,7 @@ int main()
     int w,k,lmr;
     Menu DANE;
     Mrowka *mrowki;
-//    TworzMrowisko(mrowki,DANE.lmrowek,DANE.szerokosc,DANE.wysokosc);
+    TworzMrowisko(mrowki,DANE);
     return 0;
 }
 
