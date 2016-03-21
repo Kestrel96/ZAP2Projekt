@@ -19,8 +19,10 @@ private:
 public:
     Mrowka();
     void WczytajDaneMowek(int n, int m, int LM);
+//    void Wykonaj(Menu D, Plansza &P);
     friend void TworzMrowisko(Mrowka* T, Menu D);
     friend void TworzPlansze(Menu D, Plansza **P);
+
 
 };
 

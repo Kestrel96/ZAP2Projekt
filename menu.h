@@ -7,7 +7,7 @@
 
 
 using namespace std;
-
+//Deklaracje wstepne
 
 class Mrowka;
 class Plansza;
@@ -16,13 +16,15 @@ class Menu;
 class Menu
 {
 
-public:
+private:
     int lmrowek;
     int szerokosc; //kolumny
     int wysokosc; //wiersze
     int liczba_krokow;
     int czas_odswiezania; //tylko konsola?
     bool DOMYSLNE;
+    //Przyjazn klas
+    friend class Mrowka;
 
 public:
     Menu(bool DOM=1);

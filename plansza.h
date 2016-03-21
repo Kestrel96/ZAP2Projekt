@@ -12,13 +12,12 @@ class Menu;
 class Mrowka;
 
 
-class Plansza
-{
-public:
-//    int szerokosc; //kolumny
-//    int wysokosc; //wiersze
+class Plansza{
+private:
     char pole;
     bool BIALY;
+    //Deklaracja przyjazni
+    friend class Mrowka;
 
 public:
     Plansza(); //Dekalrauje pole jako biale i ustawia flage BIALY=1
