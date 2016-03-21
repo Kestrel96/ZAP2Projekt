@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 2.7.0, 2016-03-21T23:12:05. -->
+=======
+<!-- Written by QtCreator 2.7.0, 2016-03-21T20:07:32. -->
+>>>>>>> origin/ZAP2_Prototypy1
 <qtcreator>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
