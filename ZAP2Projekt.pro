@@ -13,5 +13,5 @@ HEADERS += \
     mrowka.h \
     plansza.h \
     menu.h \
-    lista.h
+    lista.h \
 

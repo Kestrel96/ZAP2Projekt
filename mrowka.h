@@ -4,10 +4,11 @@
 #include"menu.h"
 using namespace std;
 
-
+class Plansza;
 class Menu;
-class Mrowka
-{
+
+
+class Mrowka{
 private:
 
     int x;
@@ -17,8 +18,9 @@ private:
 
 public:
     Mrowka();
-    void WczytajDaneMowek(int n, int a, int b);
+    void WczytajDaneMowek(int n, int m, int LM);
     friend void TworzMrowisko(Mrowka* T, Menu D);
+    friend void TworzPlansze(Menu D, Plansza **P);
 
 };
 
