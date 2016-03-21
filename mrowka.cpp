@@ -38,17 +38,5 @@ void TworzMrowisko(Mrowka* T, Menu D){
     }
 }
 
-//void Mrowka::Wykonaj(Menu D, Plansza &P){
-//    for(int Z=0;Z<D.liczba_krokow;Z++){
 
-//        if(this->zwrot=="gora"&&)
-
-
-
-
-
-
-
-//    }
-//}
 
