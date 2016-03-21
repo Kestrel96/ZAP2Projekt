@@ -16,7 +16,7 @@ class Menu;
 class Menu
 {
 
-public:
+private:
     int lmrowek;
     int szerokosc; //kolumny
     int wysokosc; //wiersze

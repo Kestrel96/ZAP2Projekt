@@ -14,7 +14,7 @@ class Mrowka;
 
 class Plansza
 {
-public:
+private:
 //    int szerokosc; //kolumny
 //    int wysokosc; //wiersze
     char pole;
