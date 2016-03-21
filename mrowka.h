@@ -5,7 +5,7 @@
 using namespace std;
 
 
-
+class Menu;
 class Mrowka
 {
 private:
@@ -18,6 +18,7 @@ private:
 public:
     Mrowka();
     void WczytajDaneMowek(int n, int a, int b);
+    friend void TworzMrowisko(Mrowka* T, Menu D);
 
 };
 

@@ -12,8 +12,15 @@ Mrowka::Mrowka()
     zwrot="gora";
 }
 
-//void TworzMrowisko(Mrowka* T, int n, int szerokosc, int wysokosc){
+void TworzMrowisko(Mrowka* T, Menu D){
 
-//}
+    T=new Mrowka [D.lmrowek];
+
+    for (int i=0;i<D.lmrowek;i++){
+
+
+    }
+
+}
 
 
