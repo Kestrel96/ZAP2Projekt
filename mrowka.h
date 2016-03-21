@@ -6,6 +6,8 @@ using namespace std;
 
 class Plansza;
 class Menu;
+
+
 class Mrowka{
 private:
 

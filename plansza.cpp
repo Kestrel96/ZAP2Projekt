@@ -1,9 +1,8 @@
-#include "plansza.h"
 #include <iostream>
+#include "plansza.h"
 #include"menu.h"
 #include"mrowka.h"
 #include"lista.h"
-
 using namespace std;
 
 Plansza::Plansza(){
@@ -12,15 +11,7 @@ Plansza::Plansza(){
 }
 
 
-void TworzPlansze(Menu D, Plansza **P){
-
-    P=new Plansza* [D.wysokosc];
-    for (int i=0;i<D.szerokosc;i++){
-        P[i]=new Plansza[D.szerokosc];
-    }
-}
-
-void WyswietlPlansze(Plansza **P, Menu D){
+void WyswietlPlansze(Plansza** P, Menu D){
 
     for(int i=0;i<D.wysokosc;i++){
         for(int j=0;j<D.szerokosc;j++){
@@ -29,3 +20,13 @@ void WyswietlPlansze(Plansza **P, Menu D){
         cout<<endl;
     }
 }
+
+void TworzPlansze(Menu D, Plansza** &P){
+
+    P=new Plansza* [D.wysokosc];
+    for (int i=0;i<D.wysokosc;i++){
+        P[i]=new Plansza[D.szerokosc];
+    }
+}
+
+

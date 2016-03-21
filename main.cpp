@@ -6,17 +6,28 @@
 
 using namespace std;
 
+//void WyswietlPlansze(Plansza** &P, Menu D){
+
+//    for(int i=0;i<D.wysokosc;i++){
+//        for(int j=0;j<D.szerokosc;j++){
+//            cout<<P[i][j].pole;
+//        }
+//        cout<<endl;
+//    }
+//}
+
+
 
 int main()
 {
 
     Menu DANE;
     Mrowka *mrowki;
-    Plansza **plansza;
+    Plansza** T;
 
     TworzMrowisko(mrowki,DANE);
-    TworzPlansze(DANE,plansza);
-    WyswietlPlansze(plansza, DANE);
+    TworzPlansze(DANE, T);
+    WyswietlPlansze(T,DANE);
     return 0;
 }
 
