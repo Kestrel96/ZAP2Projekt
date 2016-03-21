@@ -38,5 +38,9 @@ void TworzMrowisko(Mrowka* T, Menu D){
     }
 }
 
+void Wykonaj(Menu D, Plansza** &P, Mrowka* T){
+
+}
+
 
 
