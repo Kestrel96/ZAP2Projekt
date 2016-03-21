@@ -1,6 +1,8 @@
-#include "menu.h"
 #include<iostream>
+#include "menu.h"
 #include"mrowka.h"
+#include"plansza.h"
+#include"lista.h"
 
 
 using namespace std;
@@ -37,7 +39,7 @@ Menu::Menu(bool DOM)
     if(DOM==1){
         lmrowek=1;
         wysokosc=14;
-        szerokosc=7;
+        szerokosc=28;
         czas_odswiezania=500;
         liczba_krokow=10000;
     }
