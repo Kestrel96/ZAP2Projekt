@@ -6,6 +6,7 @@
 
 using namespace std;
 class Mrowka;
+class Plansza;
 
 class Menu
 {
@@ -20,7 +21,9 @@ private:
     friend class Mrowka;
 public:
     Menu(bool DOM=1);
-    void TworzMrowisko(Mrowka* T, Menu D);
+   friend void TworzMrowisko(Mrowka* T, Menu D);
+   friend void TworzPlansze(Menu D, Plansza **P);
+   friend void WyswietlPlansze(Plansza **P, Menu D);
 
 
 };
