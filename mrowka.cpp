@@ -38,7 +38,26 @@ void TworzMrowisko(Mrowka* T, Menu D){
     }
 }
 
-void Wykonaj(Menu D, Plansza** &P, Mrowka* T){
+void Wykonaj(Menu D, Plansza** &P, Mrowka* &T){
+    for(int Z=0;Z<D.liczba_krokow;Z++){
+        for(int M=0;M<D.lmrowek;M++){
+
+            if(T[M].zwrot=="gora"&&P[T[M].x][T[M].y].BIALY==1){
+                P[T[M].x][T[M].y].BIALY=0;
+                P[T[M].x][T[M].y].pole=179;
+                T[M].zwrot="prawo";
+                //Tak, albo tak:
+                //T[M].symbol=p;
+                //P[T[M].x][T[M].y].pole=T[M].symbol;
+
+            }
+
+
+
+        }
+
+    }
+
 
 }
 

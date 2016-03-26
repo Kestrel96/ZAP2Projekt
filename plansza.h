@@ -23,7 +23,7 @@ public:
     Plansza(); //Dekalrauje pole jako biale i ustawia flage BIALY=1
     friend void TworzPlansze(Menu D, Plansza **&P);
     friend void WyswietlPlansze(Plansza **P, Menu D);
-    friend void Wykonaj(Menu D, Plansza** &P, Mrowka* T);
+    friend void Wykonaj(Menu D, Plansza** &P, Mrowka* &T);
 };
 
 #endif // PLANSZA_H
