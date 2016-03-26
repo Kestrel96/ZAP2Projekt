@@ -36,11 +36,12 @@ Menu::Menu(bool DOM)
         }while(czas_odswiezania<0);
     }
 
+
     if(DOM==1){
         lmrowek=1;
         wysokosc=14;
         szerokosc=28;
-        czas_odswiezania=500;
+        czas_odswiezania=1000;
         liczba_krokow=10000;
     }
 

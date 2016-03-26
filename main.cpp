@@ -23,11 +23,13 @@ int main()
 
     Menu DANE;
     Mrowka *mrowki;
-    Plansza** T;
+    Plansza** P;
 
     TworzMrowisko(mrowki,DANE);
-    TworzPlansze(DANE, T);
-    WyswietlPlansze(T,DANE);
+    TworzPlansze(DANE, P);
+    WyswietlPlansze(P,DANE);
+    Wykonaj(DANE, P, mrowki);
+
     return 0;
 }
 

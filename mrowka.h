@@ -2,6 +2,7 @@
 #define MROWKA_H
 #include<iostream>
 #include"menu.h"
+#include"plansza.h"
 using namespace std;
 
 class Plansza;
@@ -9,7 +10,7 @@ class Menu;
 
 
 class Mrowka{
-private:
+public:
 
     int x;
     int y;
@@ -20,7 +21,7 @@ public:
     Mrowka();
     void WczytajDaneMowek(int n, int m, int LM);
     friend void Wykonaj(Menu D, Plansza** &P, Mrowka* &T);
-    friend void TworzMrowisko(Mrowka* T, Menu D);
+    friend void TworzMrowisko(Mrowka* &T, Menu D);
     friend void TworzPlansze(Menu D, Plansza **P);
 
 
