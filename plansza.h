@@ -10,10 +10,12 @@ using namespace std;
 // Deklaracje poprzedzające (Forward declarations):
 class Menu;
 class Mrowka;
+class Lista;
 
 
 class Plansza{
 private:
+    friend class Lista;
     char pole;
     bool BIALY;
     //Deklaracja przyjazni

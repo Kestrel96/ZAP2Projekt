@@ -42,7 +42,7 @@ Menu::Menu(bool DOM)
         wysokosc=14;
         szerokosc=28;
         czas_odswiezania=1000;
-        liczba_krokow=10000;
+        liczba_krokow=1000;
     }
 
 }

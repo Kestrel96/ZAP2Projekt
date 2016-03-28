@@ -30,3 +30,5 @@ void TworzPlansze(Menu D, Plansza** &P){
 }
 
 
+
+

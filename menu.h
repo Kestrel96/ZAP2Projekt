@@ -17,6 +17,8 @@ class Menu
 {
 
 private:
+    friend class Lista;
+
     int lmrowek;
     int szerokosc; //kolumny
     int wysokosc; //wiersze
