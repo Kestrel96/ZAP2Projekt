@@ -23,7 +23,7 @@ private:
 
 public:
     Lista();
-    void TworzListe(Menu D, Lista *&g);
+    friend void TworzListe(Menu D, Lista *&g);
 
 };
 
