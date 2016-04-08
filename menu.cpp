@@ -29,6 +29,14 @@ Menu::Menu(bool DOM)
             cout<<"Kolumny: "<<endl;
             cin>>szerokosc;
         }while(szerokosc<0);
+
+        cout<<"Podaj liczbe krokow: "<<endl;
+        do{
+            cin>>liczba_krokow;
+        }while(liczba_krokow<0);
+
+
+
         cout<<"Czas 1 kroku (sekundy): "<<endl;
         do{
             cin>>czas_odswiezania;
@@ -36,12 +44,14 @@ Menu::Menu(bool DOM)
         }while(czas_odswiezania<0);
     }
 
+
+
     if(DOM==1){
         lmrowek=1;
         wysokosc=14;
         szerokosc=28;
-        czas_odswiezania=500;
-        liczba_krokow=10000;
+        czas_odswiezania=0;
+        liczba_krokow=25;
     }
 
 }
