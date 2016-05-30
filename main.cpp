@@ -1,31 +1,12 @@
-#include <iostream>
-#include"menu.h"
-#include"mrowka.h"
-#include"plansza.h"
-#include"lista.h"
-
-using namespace std;
+#include "mainwindow.h"
+#include <QApplication>
 
 
-
-int main()
+int main(int argc, char *argv[])
 {
-
-    Menu DANE;
-    Mrowka *mrowki;
-    Plansza** P;
-    Lista *g;
-
-    TworzMrowisko(mrowki,DANE);
-    TworzPlansze(DANE, P);
-    TworzListe(DANE, g);
-    WyswietlPlansze(P,DANE);
-    Wykonaj(DANE, P, mrowki,g);
-    WyswietlajElemnty(DANE,g);
-
-
-    return 0;
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    
+    return a.exec();
 }
-
-
-

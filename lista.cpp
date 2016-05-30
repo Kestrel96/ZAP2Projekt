@@ -5,13 +5,36 @@
 #include"plansza.h"
 
 class Plansza;
+class Lista;
 
 Lista::Lista()
 {
 
 }
 
+Lista *g;
 
+void UsunListe(Menu D, Lista* &g){
+    Lista* pom;
+
+    while(g!=0){
+        pom=g;
+
+        for(int i=0;i<D.wysokosc;i++){
+
+            delete []pom->PL[i];
+        }
+        delete [] pom->PL;
+
+
+        g=g->nast;
+        delete pom;
+
+    }
+
+    cout<<"Zwolniono pamiec!"<<endl;
+
+}
 void TworzListe(Menu D, Lista *&g) {
     int l=0;
     g=0;
@@ -33,8 +56,6 @@ void TworzListe(Menu D, Lista *&g) {
 
             p=a;
             a=a->nast;
-//            a->poprz=p;
-//        cout<<"ADRES GLOWY: "<<(int) g<<endl;
         }
 
         a->PL=new Plansza* [D.wysokosc];
@@ -44,79 +65,60 @@ void TworzListe(Menu D, Lista *&g) {
             a->PL[j]= new Plansza [D.szerokosc];
         }
 
+
         a->nast=0;
         a->poprz=p;
         a->licznik=l;
-
-
-
-        //sprawdzanie, czy w kazdym elemncie listy tworzy sie tablica
-
-
-     {
-//        Plansza **POM;
-
-//        POM=new Plansza* [D.wysokosc];
-
-//        for(int z=0;z<D.wysokosc;z++){
-//            POM[z]=new Plansza [D.szerokosc];
-//        }
-
-//        for(int o=0;o<D.wysokosc;o++){
-
-//            for(int p=0;p<D.wysokosc;p++){
-
-//                cout<<a->PL[o][p].pole<<" ";
-
-
-//            }
-//            cout<<endl;
-//        }
-//        cout<<endl;
-
-
-    }
-
-
-
-//        cout<<"Adres elemntu poprzedzajacego element "<<a->licznik<<":"<<(int)a->poprz<<endl;
         l++;
 
-//        cout<<"LICZNIK:"<<a->licznik<<endl;
-
     }
 
-//    cout<<a->nast->nast->nast->nast->nast->licznik;
+
+
+
+
 }
+
 
 
 void UzupelnijListe(Menu D, Lista* &wsk, int krok, Plansza** &T){
 
-    for(int i=0;i<D.liczba_krokow;i++){
-        if(wsk->nast->licznik==krok){
-//            wsk->licznik=krok;
-            wsk=wsk->nast;
-
-            for(int o=0;o<D.wysokosc;o++){
-                for(int p=0;p<D.szerokosc;p++){
-                    wsk->PL[o][p].pole=T[o][p].pole;
+    Lista* glowa=wsk;
 
 
-                }
-            }
+    while(wsk->licznik!=krok-1){
+      wsk=wsk->nast;
 
 
-        }
     }
 
 
+    for(int o=0;o<D.wysokosc;o++){
+
+        for(int p=0;p<D.szerokosc;p++){
+
+            wsk->PL[o][p].pole=T[o][p].pole;
+
+
+        }
+
+    }
+
+    wsk=glowa;
 }
 
-void WyswietlajElemnty(Menu D, Lista * g){
+
+
+
+
+
+
+
+void WyswietlajElemnty(Menu D, Lista * &g){
 
     int k=0;
     int pop=0;
-    Lista *a=g;
+
 
     cout<<"Podaj krok do wyswietlenia (-1 konczy program): "<<endl;
 
@@ -124,12 +126,15 @@ void WyswietlajElemnty(Menu D, Lista * g){
         do{
             cout<<"Krok: "<<endl;
             cin>>k;
-        }while(!(k<1 || k>D.liczba_krokow || k!=-1));
+            if(k==-1){
+                break;
+            }
+        }while((k<=0 || k>D.liczba_krokow-1));
 
         if(k!=-1){
 
             if(k>pop){
-                while(g->licznik!=k){
+                while(g->licznik!=k-1){
 
                     g=g->nast;
 
@@ -142,10 +147,10 @@ void WyswietlajElemnty(Menu D, Lista * g){
 
                     g=g->poprz;
 
-                }
-
-
+              }
             }
+
+            pop=k;
 
 
             for(int i=0;i<D.wysokosc;i++){
@@ -156,13 +161,15 @@ void WyswietlajElemnty(Menu D, Lista * g){
                 }
                 cout<<endl;
             }
-            cout<<"KROK NR:"<<endl<<g->licznik<<endl;
+//            cout<<"KROK NR:"<<endl<<g->licznik<<endl;
         }
 
         if(k==-1){
             break;
         }
     }
+
+
 
     cout<<"ZAKONCZONO!"<<endl;
 }
